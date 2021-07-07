@@ -8,11 +8,5 @@
 </ul>
 
 <div *ngFor="let product of products">
-  <br>
-  {{product.title}}
-  <br>
-  {{product.price}}
-  <br>
-  <img [src]="product.image" alt="">
-  <br>
- </div>
+  <app-product [product]="product"></app-product>
+</div>

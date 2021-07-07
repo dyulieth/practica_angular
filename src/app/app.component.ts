@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import{ Product} from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   title = 'practica';
+
   array = ['Dennys', 'Yulieth', 'Mauricio'];
-  products = [
+
+  products: Product[] = [
     {
       id: '1',
       image: 'assets/images/imagen1.jpg',
@@ -52,6 +56,7 @@ export class AppComponent {
       description: 'bla bla bla bla bla'
     }
   ];
+
   addItem(){
     this.array.push('nuevo item');
   }
